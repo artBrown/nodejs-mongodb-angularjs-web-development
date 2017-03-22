@@ -1,14 +1,14 @@
-var x=0, y=0, z=0;
-function displayValues(){
+var x = 0, y = 0, z = 0;
+function displayValues() {
   console.log("X=%d; Y=%d; Z=%d", x, y, z);
 }
-function updateX(){
+function updateX() {
   x += 1;
 }
-function updateY(){
+function updateY() {
   y += 1;
 }
-function updateZ(){
+function updateZ() {
   z += 1;
   displayValues();
 }

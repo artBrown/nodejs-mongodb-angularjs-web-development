@@ -1,4 +1,4 @@
-function simpleTimeout(consoleTimer){
+function simpleTimeout(consoleTimer) {
   console.timeEnd(consoleTimer);
 }
 console.time("twoSecond");

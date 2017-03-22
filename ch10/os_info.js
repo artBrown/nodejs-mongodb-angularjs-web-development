@@ -12,5 +12,5 @@ console.log("totalmem :\t" + os.totalmem());
 console.log("freemem :\t" + os.freemem());
 console.log("EOL :\t" + os.EOL);
 console.log("cpus :\t\t" + JSON.stringify(os.cpus()));
-console.log("networkInterfaces : " + 
-            JSON.stringify(os.networkInterfaces()));
+console.log("networkInterfaces : " +
+  JSON.stringify(os.networkInterfaces()));
