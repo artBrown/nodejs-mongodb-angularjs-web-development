@@ -1,18 +1,18 @@
 var child_process = require('child_process');
 var options = {
-    env:{user:'Brad'},
-    encoding:'utf8'
+  env: {user: 'Brad'},
+  encoding: 'utf8'
 };
-function makeChild(){
+function makeChild() {
   var child = child_process.fork('chef.js', [], options);
-  child.on('message', function(message) {
+  child.on('message', function (message) {
     console.log('Served: ' + message);
   });
   return child;
 }
-function sendCommand(child, command){
+function sendCommand(child, command) {
   console.log("Requesting: " + command);
-  child.send({cmd:command});
+  child.send({cmd: command});
 }
 var child1 = makeChild();
 var child2 = makeChild();

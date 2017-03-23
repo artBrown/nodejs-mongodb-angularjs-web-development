@@ -1,7 +1,7 @@
 var http = require('http');
-var options = { port: '8080'};
-function sendRequest(){
-  http.request(options, function(response){
+var options = {port: '8009'};
+function sendRequest() {
+  http.request(options, function (response) {
     var serverData = '';
     response.on('data', function (chunk) {
       serverData += chunk;
@@ -11,7 +11,7 @@ function sendRequest(){
     });
   }).end();
 }
-for (var i=0; i<5; i++){
+for (var i = 0; i < 5; i++) {
   console.log("Sending Request");
   sendRequest();
 }

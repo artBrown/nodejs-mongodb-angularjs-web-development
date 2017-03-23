@@ -12,13 +12,13 @@ http.createServer(function (req, res) {
     res.write('\n<h1>' + messages[idx] + '</h1>');
   }
   res.end('\n</body></html>');
-}).listen(8080);
+}).listen(8007);
 
 
 
 var options = {
     hostname: 'localhost',
-    port: '8080',
+    port: '8007',
   };
 function handleResponse(response) {
   var serverData = '';

@@ -1,6 +1,6 @@
 var fs = require('fs');
 fs.stat('file_stats.js', function (err, stats) {
-  if (!err){
+  if (!err) {
     console.log('stats: ' + JSON.stringify(stats, null, '  '));
     console.log(stats.isFile() ? "Is a File" : "Is not a File");
     console.log(stats.isDirectory() ? "Is a Folder" : "Is not a Folder");

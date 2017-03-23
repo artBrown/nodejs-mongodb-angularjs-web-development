@@ -13,14 +13,14 @@ http.createServer(function (req, res) {
     res.writeHead(200);
     res.end(JSON.stringify(resObj));
   });
-}).listen(8080);
+}).listen(8007);
 
 
 var http = require('http');
 var options = {
   host: '127.0.0.1',
   path: '/',
-  port: '8080',
+  port: '8007',
   method: 'POST'
 };
 function readJSONResponse(response) {

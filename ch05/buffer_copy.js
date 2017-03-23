@@ -16,7 +16,9 @@ console.log("Dashes: " + dashes.toString());
 var dots = new Buffer('-------------------------');
 dots.fill('.');
 console.log("dots: " + dots.toString());
-for (var i=0; i < dots.length; i++){
-  if (i % 2) { dots[i] = alphabet[i]; }
+for (var i = 0; i < dots.length; i++) {
+  if (i % 2) {
+    dots[i] = alphabet[i];
+  }
 }
 console.log("dots: " + dots.toString());

@@ -12,4 +12,4 @@ app.use(queryRemover);
 app.get('/no/query', function(req, res) {
   res.send("test");
 });
-app.listen(80);
+app.listen(8059);

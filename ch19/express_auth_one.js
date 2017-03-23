@@ -1,13 +1,13 @@
 var express = require('express');
 var basicAuth = require('basic-auth-connect');
 var app = express();
-var auth = basicAuth(function(user, pass) {
+var auth = basicAuth(function (user, pass) {
   return (user === 'user1' && pass === 'test');
 });
-app.get('/library', function(req, res) {
+app.get('/library', function (req, res) {
   res.send('Welcome to the library.');
 });
-app.get('/restricted', auth, function(req, res) {
+app.get('/restricted', auth, function (req, res) {
   res.send('Welcome to the restricted section.');
 });
-app.listen(80);
+app.listen(8029);
