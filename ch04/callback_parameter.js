@@ -29,7 +29,6 @@ show.seeCar("Bugatti")
 show.seeCar("Lamborghini")
 show.seeCar("Aston Martin")
 
-//// more wt ch10 util_inherit
 function Writer() {
 }
 util.inherits(Writer, events.EventEmitter)
@@ -45,6 +44,8 @@ w.on("data", function (data) {
 })
 w.write("w Some Data!")
 
+//// more wt ch10 util_inherit
+console.log('')
 class Writer1 extends events.EventEmitter {
   write(data) {
     this.emit("data", data)
