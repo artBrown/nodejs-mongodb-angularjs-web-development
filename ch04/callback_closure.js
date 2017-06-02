@@ -18,3 +18,13 @@ for (var idx in cars) {
     });
   })(message);
 }
+
+//// more
+for (var idx in cars) {
+  var message = "Saw a " + cars[idx];
+  ((msg, idx) => {
+    logCar(msg, () => {
+      console.log(idx + " es6 Callback: " + msg);
+    });
+  })(message, idx);
+}
