@@ -46,16 +46,13 @@ w.on("data", function (data) {
 w.write("w Some Data!")
 
 class Writer1 extends events.EventEmitter {
-  constructor() {
-    super()
-  }
   write(data) {
     this.emit("data", data)
   }
 }
 var w1 = new Writer1()
 console.log(w1 instanceof events.EventEmitter)
-console.log(Writer1.super_ === events.EventEmitter) // TODO: false...
+console.log(Object.getPrototypeOf(w1.constructor) === events.EventEmitter)
 w1.on("data", function (data) {
   console.log('w1 Received data: "' + data + '"')
 })
