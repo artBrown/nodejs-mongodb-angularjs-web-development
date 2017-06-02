@@ -71,9 +71,9 @@ Account1.prototype.balance = 0
 var account1 = new Account1()
 account1.on("balanceChanged", account1.displayBalance)
 account1.on("balanceChanged", account1.checkOverdraw)
-account1.on("balanceChanged", (() => {
+account1.on("balanceChanged", () => {
   account1.checkGoal(this, 1000)
-}))
+})
 account1.deposit(220)
 account1.deposit(320)
 account1.deposit(600)
