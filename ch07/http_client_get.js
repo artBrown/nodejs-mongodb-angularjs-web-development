@@ -1,19 +1,19 @@
-var http = require('http');
+var http = require('http')
 var options = {
-    hostname: 'localhost',
-    port: '8007',
-  };
-function handleResponse(response) {
-  var serverData = '';
-  response.on('data', function (chunk) {
-    serverData += chunk;
-  });
-  response.on('end', function () {
-    console.log("Response Status:", response.statusCode);
-    console.log("Response Headers:", response.headers);    
-    console.log(serverData);
-  });
+  hostname: 'localhost',
+  port: '8007',
 }
-http.request(options, function(response){
-  handleResponse(response);
-}).end();
+function handleResponse(response) {
+  var serverData = ''
+  response.on('data', function (chunk) {
+    serverData += chunk
+  })
+  response.on('end', function () {
+    console.log("Response Status:", response.statusCode)
+    console.log("Response Headers:", response.headers)
+    console.log(serverData)
+  })
+}
+http.request(options, function (response) {
+  handleResponse(response)
+}).end()
