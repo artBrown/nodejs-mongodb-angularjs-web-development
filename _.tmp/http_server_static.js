@@ -2,9 +2,13 @@ var fs = require('fs')
 var http = require('http')
 var url = require('url')
 var ROOT_DIR = "html/"
+var FILE_NAME = "hello.html"
 http.createServer(function (req, res) {
   var urlObj = url.parse(req.url, true, false)
-  fs.readFile(ROOT_DIR + urlObj.pathname, function (err, data) {
+  var pathName = urlObj.pathName === undefined || urlObj.pathName ==="/"
+    ? "/"
+    : urlObj.pathName + FILE_NAME
+  fs.readFile(ROOT_DIR + pathname, function (err, data) {
     if (err) {
       res.writeHead(404)
       res.end(JSON.stringify(err))
@@ -15,10 +19,11 @@ http.createServer(function (req, res) {
   })
 }).listen(9010)
 
+
 var options = {
   hostname: 'localhost',
   port: '9010',
-  path: '/hello.html'
+  path: '/'
 }
 function handleResponse(response) {
   var serverData = ''
