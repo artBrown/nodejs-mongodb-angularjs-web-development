@@ -1,15 +1,15 @@
-process.on('message', function(message, parent) {
-  var meal = {};
-  switch (message.cmd){
+process.on('message', function (message, parent) {
+  var meal = {}
+  switch (message.cmd) {
     case 'makeBreakfast':
-      meal = ["ham", "eggs", "toast"];
-      break;
+      meal = ["ham", "eggs", "toast"]
+      break
     case 'makeLunch':
-      meal = ["burger", "fries", "shake"];
-      break;
+      meal = ["burger", "fries", "shake"]
+      break
     case 'makeDinner':
-      meal = ["soup", "salad", "steak"];
-      break;
+      meal = ["soup", "salad", "steak"]
+      break
   }
-  process.send(meal);
-});
+  process.send(meal)
+})
