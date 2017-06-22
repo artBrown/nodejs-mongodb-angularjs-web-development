@@ -6,4 +6,6 @@
 *.iml
 out
 gen
-!/.idea
+.idea/inspectionProfiles/
+ch06/data/folderA/
+ch06/renamed/
