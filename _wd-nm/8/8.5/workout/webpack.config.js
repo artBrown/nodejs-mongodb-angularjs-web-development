@@ -36,7 +36,8 @@ const config = {
     resolve: {
         modulesDirectories: [nodeModulesPath],
         alias: {
-            'handlebars': 'handlebars/runtime.js'
+          'handlebars': 'handlebars-intl/dist/handlebars-intl.js'
+/*            'handlebars': 'handlebars/runtime.js'*/
         }
     },
     resolveLoader: {

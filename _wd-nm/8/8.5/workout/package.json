@@ -30,6 +30,7 @@
     "express-flash": "0.0.2",
     "express-session": "^1.12.1",
     "extract-text-webpack-plugin": "^0.9.1",
+    "fbjs": "^0.8.12",
     "handlebars-intl": "^1.1.1",
     "hbs": "~3.1.0",
     "helmet": "^0.14.0",
@@ -48,7 +49,8 @@
     "react-dom": "^0.14.3",
     "serve-favicon": "~2.3.0",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.9"
+    "webpack": "^1.12.9",
+    "yargs": "^8.0.2"
   },
   "devDependencies": {
     "chai": "^3.4.1",
