@@ -18,11 +18,12 @@ var tc = new JSONObjectStream()
 tc.on("object", function (object) {
   console.log("Name: %s", object.name)
   console.log("Color: %s", object.color)
+  console.log("Handled: %s", object.handled)      // handled:undefined
 })
 tc.on("data", function (data) {
   console.log("Data: %s", data.toString())
 })
-tc.write('{"name":"Carolinus", "color": "Green"}')
+tc.write('{"name":"Carolinus", "color": "Green"}') // handled:true
 tc.write('{"name":"Solarius", "color": "Blue"}')
 tc.write('{"name":"Lo Tae Zhao", "color": "Gold"}')
 tc.write('{"name":"Ommadon", "color": "Red"}')
